@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build": "next build",
+    "export": "next export -o docs",
+    "deploy": "npm run build && npm run export && git add -A && git commit -m \"deploy: export to docs\" && git push"
   },
   "dependencies": {
     "@tsparticles/engine": "^3.9.1",
@@ -33,4 +35,5 @@
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
   }
+  
 }
